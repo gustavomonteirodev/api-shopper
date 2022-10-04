@@ -1,1 +1,3 @@
 # api-shopper
+
+👨‍💻 Em desenvolvimento...👨‍💻
