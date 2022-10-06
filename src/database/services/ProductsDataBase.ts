@@ -10,13 +10,4 @@ export class ProductsDataBase extends BaseDatabase {
         return result
     }
 
-    // public async getProductsByID() {
-
-    //     const result = await BaseDatabase.connection(PRODUCTS_LIST)
-    //         .select('*')
-    //         .where({id})
-    //     return result
-    // }
-
-
 }
