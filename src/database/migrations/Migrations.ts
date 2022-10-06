@@ -28,4 +28,6 @@ export class Migrations extends BaseDatabase {
     }
 }
 
-Migrations.createTables()
+// Para popular os itens em seu BD, só descomentar a linha abaixo para invocar os Migrations
+
+// Migrations.createTables()

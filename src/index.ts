@@ -3,7 +3,7 @@ import cors from 'cors'
 import dotenv from "dotenv"
 import { AddressInfo } from "net"
 
-import { pingRouter } from './router/pingRouter'
+import { productsRouter } from './router/ProductsRouter'
 
 dotenv.config()
 
@@ -14,10 +14,10 @@ app.use(cors())
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {
         const address = server.address() as AddressInfo
-        console.log(`Server is running in http://localhost: ${address.port}`)
+        console.log(`🚀 Server is running on http://localhost: ${address.port}`)
     } else {
         console.error(`Failure upon starting server.`)
     }
 })
 
-app.use("/ping", pingRouter)
+app.use("/shopper", productsRouter)
