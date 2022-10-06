@@ -30,10 +30,10 @@ export class Migrations extends BaseDatabase {
             await BaseDatabase.connection.raw(`
                 CREATE TABLE IF NOT EXISTS ${REQUEST_PRODUCTS}(
                 productId INT NOT NULL,
-                orderId VARCHAR(255) NOT NULL,
+                requestId VARCHAR(255) NOT NULL,
                 productQuantity INT NOT NULL,
                 FOREIGN KEY (productId) REFERENCES ${PRODUCTS_LIST}(id),
-                FOREIGN KEY (orderId) REFERENCES ${REQUEST_LIST}(id)
+                FOREIGN KEY (requestId) REFERENCES ${REQUEST_LIST}(id)
             );
         `)
 
@@ -50,4 +50,4 @@ export class Migrations extends BaseDatabase {
 
 // Para popular os itens em seu BD, só descomentar a linha abaixo para invocar os Migrations
 
-// Migrations.createTables()
+Migrations.createTables()

@@ -18,8 +18,8 @@ export class RequestController {
             }
 
             const requestBusiness = new RequestBusiness(idGenerator, requestDataBase)
-            const newOrder = await requestBusiness.createRequest(input)
-            res.status(201).send(newOrder)
+            const newRequest = await requestBusiness.createRequest(input)
+            res.status(201).send(newRequest)
         }
 
         catch (error: any) {
