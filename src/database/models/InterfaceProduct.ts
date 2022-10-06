@@ -5,8 +5,3 @@ export interface Product {
     qty_stock: number
 }
 
-export interface OrderItem {
-    id: string,
-    prodName: string,
-    amount: number
-}

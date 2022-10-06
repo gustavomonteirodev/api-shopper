@@ -1,3 +1,6 @@
 
 ### Lista de Produtos
 GET http://localhost:3003/shopper/products
+
+### Pedido dos produtos
+GET http://localhost:3003/shopper/products

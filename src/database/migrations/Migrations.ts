@@ -2,6 +2,8 @@ import { BaseDatabase } from "../BaseDatabase"
 import { products } from "../data"
 
 export const PRODUCTS_LIST = "products_shopper"
+export const REQUEST_LIST = "request_shopper"
+export const REQUEST_PRODUCTS = "request_products_shopper"
 
 export class Migrations extends BaseDatabase {
 
@@ -16,6 +18,24 @@ export class Migrations extends BaseDatabase {
                 qty_stock INT NOT NULL
             );
          `)
+
+            await BaseDatabase.connection.raw(`
+                CREATE TABLE IF NOT EXISTS ${REQUEST_LIST} (
+                id VARCHAR(255) NOT NULL PRIMARY KEY,
+                clientName VARCHAR(50) NOT NULL,
+                dueDate DATE NOT NULL
+            );         
+        `)
+
+            await BaseDatabase.connection.raw(`
+                CREATE TABLE IF NOT EXISTS ${REQUEST_PRODUCTS}(
+                productId INT NOT NULL,
+                orderId VARCHAR(255) NOT NULL,
+                productQuantity INT NOT NULL,
+                FOREIGN KEY (productId) REFERENCES ${PRODUCTS_LIST}(id),
+                FOREIGN KEY (orderId) REFERENCES ${REQUEST_LIST}(id)
+            );
+        `)
 
             await Migrations.connection(PRODUCTS_LIST).insert(products)
 
