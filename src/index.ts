@@ -5,6 +5,7 @@ import { AddressInfo } from "net"
 
 import { productsRouter } from './router/ProductsRouter'
 import { requestRouter } from './router/RequestRouter'
+import { getrequestsRouter } from './router/getRequestsRouter'
 
 
 dotenv.config()
@@ -24,3 +25,4 @@ const server = app.listen(process.env.PORT || 3003, () => {
 
 app.use("/shopper", productsRouter)
 app.use("/shopper", requestRouter)
+app.use("/shopper", getrequestsRouter)

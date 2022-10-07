@@ -29,4 +29,11 @@ export class RequestBusiness {
         }
     }
 
+    async getRequests(): Promise<any> {
+
+            const requestDataBase = new RequestDataBase()
+            const result = await requestDataBase.getRequests()
+    
+            return result
+        }
 }

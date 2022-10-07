@@ -30,4 +30,10 @@ export class RequestDataBase extends BaseDatabase {
             throw new Error(error.sqlMessage || error.message)
         }
     }
+
+    public async getRequests() {
+        const result = await BaseDatabase.connection(REQUEST_LIST)
+            .select('*')
+        return result
+    }
 }
