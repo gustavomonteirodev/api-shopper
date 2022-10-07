@@ -5,7 +5,6 @@ import { AddressInfo } from "net"
 
 import { productsRouter } from './router/ProductsRouter'
 import { requestRouter } from './router/RequestRouter'
-import { getrequestsRouter } from './router/getRequestsRouter'
 
 
 dotenv.config()
@@ -22,7 +21,8 @@ const server = app.listen(process.env.PORT || 3003, () => {
         console.error(`Failure upon starting server.`)
     }
 })
-
+// Lista de produtos 
 app.use("/shopper", productsRouter)
+
+// Pedidos
 app.use("/shopper", requestRouter)
-app.use("/shopper", getrequestsRouter)

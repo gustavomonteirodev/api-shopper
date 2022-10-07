@@ -1,8 +1,8 @@
-import express from "express"
-import { GetRequestsController } from "../controller/RequestController"
+// import express from "express"
+// import { GetRequestsController } from "../controller/RequestController"
 
-export const getrequestsRouter = express.Router()
-const getrequestsController = new GetRequestsController()
+// export const getrequestsRouter = express.Router()
+// const getrequestsController = new GetRequestsController()
 
 
-getrequestsRouter.get("/getrequests", getrequestsController.getRequests)
+// getrequestsRouter.get("/getrequests", getrequestsController.getRequests)

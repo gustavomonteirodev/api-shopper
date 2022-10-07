@@ -26,22 +26,38 @@ export class RequestController {
             res.status(400).send(error.message)
         }
     }
+
+    async getRequests(req: Request, res: Response) {
+        try {
+            // const input: RequestInputDTO = {
+            //     clientName: req.body.clientName,
+            //     dueDate: req.body.dueDate,
+            //     list: req.body.list
+            const requestedBusiness = new RequestBusiness(idGenerator, requestDataBase)
+            const newRequest = await requestedBusiness.getRequests()
+            res.status(201).send({newRequest})
+            }
+
+        catch (error: any) {
+            res.status(500).send(error.message)
+        }
+    }
 }
 
-    export class GetRequestsController {
-        async getRequests(req: Request, res: Response) {
-            try {
-                // const input: RequestInputDTO = {
-                //     clientName: req.body.clientName,
-                //     dueDate: req.body.dueDate,
-                //     list: req.body.list
-                const requestedBusiness = new RequestBusiness(idGenerator, requestDataBase)
-                const newRequest = await requestedBusiness.getRequests()
-                res.status(201).send({newRequest})
-                }
+//     export class GetRequestsController {
+//         async getRequests(req: Request, res: Response) {
+//             try {
+//                 // const input: RequestInputDTO = {
+//                 //     clientName: req.body.clientName,
+//                 //     dueDate: req.body.dueDate,
+//                 //     list: req.body.list
+//                 const requestedBusiness = new RequestBusiness(idGenerator, requestDataBase)
+//                 const newRequest = await requestedBusiness.getRequests()
+//                 res.status(201).send({newRequest})
+//                 }
     
-            catch (error: any) {
-                res.status(500).send(error.message)
-            }
-        }
-}
+//             catch (error: any) {
+//                 res.status(500).send(error.message)
+//             }
+//         }
+// }

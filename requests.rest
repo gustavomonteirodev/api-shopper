@@ -1,8 +1,8 @@
 
-### Lista de Produtos
+### Exibir Lista de Produtos
 GET http://localhost:3003/shopper/products
 
-### Pedido dos produtos
+### Cadastro de Pedido dos produtos
 POST http://localhost:3003/shopper/request
 Content-Type: application/json
 
@@ -21,5 +21,5 @@ Content-Type: application/json
     ]
 }
 
-### Pedidos efetuados
+### Exibir Pedidos efetuados
 GET http://localhost:3003/shopper/getrequests
