@@ -31,9 +31,10 @@ export class RequestDataBase extends BaseDatabase {
         }
     }
 
-    public async getRequests() {
+    async getRequests() {
         const result = await BaseDatabase.connection(REQUEST_LIST)
             .select('*')
         return result
     }
+  
 }

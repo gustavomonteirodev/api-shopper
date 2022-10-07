@@ -1,4 +1,4 @@
-import { ProductsDataBase } from "../database/services/ProductsDataBase"
+import { ProductsDataBase } from "../database/ProductsDataBase"
 
 
 export class ProductsBusiness {
