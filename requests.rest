@@ -1,6 +1,25 @@
 
-### Lista de Produtos
+### Exibir Lista de Produtos
 GET http://localhost:3003/shopper/products
 
-### Pedido dos produtos
-GET http://localhost:3003/shopper/products
+### Cadastro de Pedido dos produtos
+POST http://localhost:3003/shopper/request
+Content-Type: application/json
+
+{
+    "clientName": "Gustavo M",
+    "dueDate": "2022-11-11",
+    "list": [
+        {
+            "productId": 16,
+            "productQuantity": 4
+        },
+        {
+            "productId": 19,
+            "productQuantity": 3
+        }
+    ]
+}
+
+### Exibir Pedidos efetuados
+GET http://localhost:3003/shopper/getrequests

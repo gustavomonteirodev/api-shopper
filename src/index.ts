@@ -21,6 +21,8 @@ const server = app.listen(process.env.PORT || 3003, () => {
         console.error(`Failure upon starting server.`)
     }
 })
-
+// Lista de produtos 
 app.use("/shopper", productsRouter)
+
+// Pedidos
 app.use("/shopper", requestRouter)
