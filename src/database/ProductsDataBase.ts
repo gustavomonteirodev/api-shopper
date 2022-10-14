@@ -23,17 +23,4 @@ export class ProductsDataBase extends BaseDatabase {
         }
      }
 
-   //  async editProduct(id_product: Number, qty:Number): Promise<  undefined> {
-   //      try {
-   //         const result = await RequestDataBase.connection.raw(`
-   //         UPDATE ${PRODUCTS_LIST} SET qty_stock = '${qty}' WHERE id = '${id_product}'
-   //         `);
-   //         return ;
-   //      } catch (error) {
-   //         if (error instanceof Error) {
-   //            throw new Error(error.message) 
-   //          }
-   //      }
-   //   }
-
 }
