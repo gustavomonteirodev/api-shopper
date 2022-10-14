@@ -3,9 +3,9 @@
 Projeto de backend desenvolvido como uma das etapas do processo seletivo para vaga de Full-stack Junior. API que simula um sistema de pedidos de um supermercado, com o foco de criar, mostrar e editar pedidos, como também exibir produtos disponíveis em estoque e lista de pedidos efetuados.
 
 ## 🛠 Métodos das entidades 
+- POST: `/shopper/request` 
 - GET: `/shopper/products` 
 - GET: `/shopper/getrequests`
-- POST: `/shopper/request` 
 
 ## 🧾 Doc da API - Postman 
 - [Link Documentação](https://documenter.getpostman.com/view/21555811/2s8479ywdr)
